@@ -1,6 +1,6 @@
 # Discord Video Downloader Bot
 
-This Discord bot allows you to download videos from links provided in Discord messages using `yt-dlp`. The bot will save videos with a timestamp in the filename to avoid overwriting existing files.
+This Discord bot allows you to download videos from links provided in Discord messages using `yt-dlp`. The bot saves videos with a timestamp in the filename to avoid overwriting existing files.
 
 ## Features
 
@@ -18,64 +18,60 @@ This Discord bot allows you to download videos from links provided in Discord me
 ## Installation
 
 1. **Clone the Repository**
-
-   ```bash
+   
    git clone https://github.com/yourusername/discord-video-downloader-bot.git
    cd discord-video-downloader-bot
-Install Dependencies
 
-Install the required Python packages:
+2. **Install Dependencies**
 
-bash
-Copy code
-pip install -r requirements.txt
-Create a requirements.txt file with the following content:
+   Install the required Python packages:
 
-Copy code
-discord.py
-Set Up Environment Variables
+   pip install -r requirements.txt
 
-Create a .env file in the root directory with the following content:
+   Create a `requirements.txt` file with the following content:
 
-makefile
-Copy code
-DISCORD_TOKEN=your_discord_bot_token
-Replace your_discord_bot_token with your actual Discord bot token.
+   discord.py
 
-Create the run.py File
+3. **Set Up Environment Variables**
 
-Save the provided script as run.py in your project directory.
+   Create a `.env` file in the root directory with the following content:
 
-Usage
-Run the Bot
+   DISCORD_TOKEN=your_discord_bot_token
 
-Start the bot with:
+   Replace `your_discord_bot_token` with your actual Discord bot token.
 
-bash
-Copy code
-python run.py
-Interact with the Bot
+4. **Create the `run.py` File**
 
-Send a message in any channel with the format /videolink: <video_link>.
-The bot will send a message indicating that it is processing the video link and will update with the download progress.
-Code Explanation
-Imports and Setup
+   Save the provided script as `run.py` in your project directory.
 
-The bot uses discord.py and subprocess to handle Discord interactions and video downloads.
+## Usage
 
-Event Handling
+1. **Run the Bot**
 
-on_ready: Confirms the bot is running.
-on_message: Listens for messages starting with /videolink: and processes the video link.
-Video Downloading
+   Start the bot with:
 
-send_download_message: Sends an initial message and calls run_yt_dlp to download the video.
-run_yt_dlp: Runs yt-dlp in a subprocess and updates the progress in the message.
-Troubleshooting
-Token Not Found: Ensure DISCORD_TOKEN is correctly set in the .env file.
-Download Failures: Check that yt-dlp is installed and accessible.
-Contributing
+   python run.py
+
+2. **Interact with the Bot**
+
+   - Send a message in any channel with the format `/videolink: <video_link>`.
+   - The bot will send a message indicating that it is processing the video link and will update with the download progress.
+
+## Code Explanation
+
+- **Imports and Setup**: The bot uses `discord.py` and `subprocess` to handle Discord interactions and video downloads.
+- **Event Handling**: `on_ready` confirms the bot is running. `on_message` listens for messages starting with `/videolink:` and processes the video link.
+- **Video Downloading**: `send_download_message` sends an initial message and calls `run_yt_dlp` to download the video. `run_yt_dlp` runs `yt-dlp` in a subprocess and updates the progress in the message.
+
+## Troubleshooting
+
+- **Token Not Found**: Ensure `DISCORD_TOKEN` is correctly set in the `.env` file.
+- **Download Failures**: Check that `yt-dlp` is installed and accessible.
+
+## Contributing
+
 Feel free to open issues or submit pull requests with improvements or suggestions!
 
-License
+## License
+
 This project is licensed under the MIT License. See the LICENSE file for details.
