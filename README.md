@@ -1,4 +1,4 @@
-# ytdl-discord-bot
+# Discord Video Downloader Bot
 
 This Discord bot allows you to download videos from links provided in Discord messages using `yt-dlp`. The bot will save videos with a timestamp in the filename to avoid overwriting existing files.
 
@@ -78,4 +78,4 @@ Contributing
 Feel free to open issues or submit pull requests with improvements or suggestions!
 
 License
-This project is licensed under the MIT License. See the LICENSE file for details
+This project is licensed under the MIT License. See the LICENSE file for details.
